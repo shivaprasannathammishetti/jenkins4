@@ -11,9 +11,9 @@ pipeline {
         }
         stage('Build and Package') {
             steps {
-                mvn clean package
+                // Wrap the maven command in sh or bat
+                sh 'mvn clean package'
             }
         }
     }
-    
 }
